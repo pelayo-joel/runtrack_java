@@ -1,7 +1,6 @@
 public class StringArray {
     public static void main (String[] args) {
         //Define a constant that'll be the length of 'names'
-        final int arrayLength = 4;
         String[] names = {"Josette", "John", "Myrtille", "Marc"};
 
 
