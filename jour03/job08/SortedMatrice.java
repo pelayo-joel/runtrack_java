@@ -68,7 +68,7 @@ public class SortedMatrice {
     /* Actual function that sorts the matrice using above functions, it uses Quicksort and makes it a general big'O notation of O(n^?)
         (which is the least optimal option especially since we're using linear search during the algorithm multiple times) */
     public static int[][] MatriceSort (int[][] unsorted){
-        int[][] sorted = { new int[unsorted.length], new int[unsorted.length], new int[unsorted.length] };
+        int[][] sorted = new int[unsorted.length][unsorted.length];
         int max = Highest(unsorted);
 
         for (int i = 0; i < unsorted.length; i++){
