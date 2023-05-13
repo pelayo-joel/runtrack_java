@@ -5,10 +5,10 @@ public class ThreadedCount {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a number to count from 0: ");
+        long num = input.nextLong();
+
         System.out.println("Enter a number of threads to use: ");
         Scanner inputThreads = new Scanner(System.in);
-
-        long num = input.nextLong();
         int nThreads = inputThreads.nextInt();
 
         long start = System.nanoTime();

@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Threading extends Thread {  
     private int count;
 

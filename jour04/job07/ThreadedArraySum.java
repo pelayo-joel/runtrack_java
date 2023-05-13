@@ -5,11 +5,17 @@ public class ThreadedArraySum {
     public static void main(String[] args) {
         System.out.println("Enter a length of value to sum: ");
         Scanner inputLength = new Scanner(System.in);
+        int arrayLength = inputLength.nextInt();
+
         System.out.println("Enter a number of threads to use: ");
         Scanner inputThreads = new Scanner(System.in);
-
-        int arrayLength = inputLength.nextInt();
         int nThreads = inputThreads.nextInt();
+        while (nThreads == 0 || (nThreads > (arrayLength / 2))) {
+            System.out.println("Number of threads in this program can't exceed half of the length that you entered: ");
+            inputThreads = new Scanner(System.in);
+            nThreads = inputThreads.nextInt();
+        }
+
         
         ArrayList<Integer> numbers = new ArrayList<>();
         for (int i = 0; i < arrayLength; i++){
